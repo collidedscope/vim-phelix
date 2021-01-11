@@ -5,7 +5,7 @@ endif
 setlocal isi+=/,',- isk+=/,',-
 
 syn match   phxShebang '\%^#!.*$'
-syn match   phxNumber '-\=\d\+\%(\.\d\+\)\='
+syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
 syn match   phxNumber '\.\.'
 syn region  phxString start='"' end='"'
 
