@@ -21,7 +21,7 @@ syn match   phxBuiltin '\.'
 syn match   phxBuiltin '\[\]'
 syn match   phxBuiltin '\\'
 
-syn keyword phxBuiltin dup over nover pop swap rot
+syn keyword phxBuiltin dup 2dup over nover pop swap 2swap rot
 syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby juxt
 syn keyword phxBuiltin call juxt
 syn keyword phxBuiltin f/read f/write sleep
