@@ -19,9 +19,10 @@ syn match phxOperator '[-+*/%]\|<<\|>>'
 
 syn match   phxBuiltin '\.'
 syn match   phxBuiltin '\[\]'
+syn match   phxBuiltin '\\'
 
 syn keyword phxBuiltin dup over nover pop swap rot
-syn keyword phxBuiltin p _ len sort map select reject zip max maxby juxt
+syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby juxt
 syn keyword phxBuiltin call juxt
 syn keyword phxBuiltin f/read f/write sleep
 syn keyword phxBuiltin s/bytes s/split s/join s/slice s/up s/dn
