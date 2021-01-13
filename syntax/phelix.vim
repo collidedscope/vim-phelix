@@ -14,7 +14,7 @@ syn match   phxComment '#.*'
 syn keyword phxBoolean true false
 syn match phxBoolean '[<>=]'
 syn keyword phxRepeat while until times each forever
-syn keyword phxConditional if until cond
+syn keyword phxConditional if cond
 syn match phxOperator '[-+*/%]\|<<\|>>'
 
 syn match   phxBuiltin '\.'
