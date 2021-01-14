@@ -23,9 +23,10 @@ syn match   phxBuiltin '\\'
 syn keyword phxBuiltin dup 2dup over nover pop swap 2swap rot
 syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby juxt
 syn keyword phxBuiltin call juxt
-syn keyword phxBuiltin get put
-syn keyword phxBuiltin f/read f/write sleep
 syn keyword phxBuiltin s/bytes s/split s/join s/slice s/up s/dn
+
+syn keyword phxState f/read f/write sleep gets get put
+syn match   phxState '<-'
 
 syn match   phxQuote '\'\i\+'
 syn match   phxDefine '\i\+:'
@@ -41,6 +42,7 @@ hi link phxQuote Define
 hi link phxNumber Number
 hi link phxRepeat Repeat
 hi link phxShebang PreProc
+hi link phxState Type
 hi link phxString String
 
 let b:current_syntax = 'phelix'
