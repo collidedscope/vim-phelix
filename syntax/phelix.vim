@@ -2,7 +2,7 @@ if exists('b:current_syntax')
   finish
 endif
 
-setlocal isi+=/,',+,-,? isk+=/,',+,-,?
+syn iskeyword 48-57,64-90,97-122,+,-,*,/,?,',$,_
 
 syn match   phxShebang '\%^#!.*$'
 syn match   phxComment '#.*'
@@ -30,8 +30,8 @@ syn keyword phxPrelude 2dip 2keep 2bi +- first last part rotd roll
 
 syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
 
-syn match   phxQuote '\'\i\+'
-syn match   phxDefine '\i\+:'
+syn match   phxQuote '\'\k\+'
+syn match   phxDefine '\k\+:'
 syn match   phxDefine ';'
 
 hi link phxComment Comment
