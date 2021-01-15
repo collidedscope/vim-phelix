@@ -25,7 +25,7 @@ syn keyword phxBuiltin call
 syn keyword phxState f/read f/write sleep gets get put invert merge
 syn match   phxState '<-'
 
-syn keyword phxPrelude true false 2drop keep bi tri 2curry with cleave
+syn keyword phxPrelude 2drop keep bi tri 2curry with cleave
 syn keyword phxPrelude 2dip 2keep 2bi +- first last part rotd roll
 
 syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
