@@ -28,13 +28,16 @@ syn keyword phxBuiltin call
 syn keyword phxState f/read f/write sleep gets get put invert merge
 syn match   phxState '<-'
 
+syn keyword phxPrelude true false 2drop keep bi tri 2curry with cleave
+syn keyword phxPrelude 2dip 2keep 2bi +- first last part rotd roll
+
 syn match   phxQuote '\'\i\+'
 syn match   phxDefine '\i\+:'
 syn match   phxDefine ';'
 
 hi link phxComment Comment
 hi link phxBoolean Boolean
-hi link phxBuiltin Identifier
+hi link phxPrelude Identifier
 hi link phxConditional Conditional
 hi link phxOperator Operator
 hi link phxDefine Function
@@ -44,5 +47,14 @@ hi link phxRepeat Repeat
 hi link phxShebang PreProc
 hi link phxState Type
 hi link phxString String
+
+function! CribHighlighting(new, group, attrs)
+  let l:id = synIDtrans(hlID(a:group))
+  exec 'hi ' . a:new . ' cterm=' . a:attrs . ' gui=' . a:attrs .
+        \ ' ctermfg=' . synIDattr(l:id, 'fg', 'cterm') .
+        \ ' guifg='   . synIDattr(l:id, 'fg', 'gui')
+endfunction
+
+call CribHighlighting('phxBuiltin', 'Identifier', 'bold')
 
 let b:current_syntax = 'phelix'
