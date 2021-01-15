@@ -7,9 +7,6 @@ setlocal isi+=/,',+,-,? isk+=/,',+,-,?
 syn match   phxShebang '\%^#!.*$'
 syn match   phxComment '#.*'
 
-syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
-syn match   phxNumber '\.\.'
-
 syn region  phxString start='"' end='"'
 syn keyword phxString s/bytes s/chars s/split s/join s/slice s/up s/dn
 
@@ -17,7 +14,7 @@ syn match   phxBoolean 'true\|false\|[<>=]'
 
 syn keyword phxRepeat while until times each each/i forever
 syn keyword phxConditional if cond
-syn match   phxOperator '[-+*/%,.]\|<<\|>>'
+syn match   phxOperator '[-+*/%,.]\|<<\|>>\|\.\.'
 
 syn match   phxBuiltin '\[\]\|{}'
 syn match   phxBuiltin '\\'
@@ -30,6 +27,8 @@ syn match   phxState '<-'
 
 syn keyword phxPrelude true false 2drop keep bi tri 2curry with cleave
 syn keyword phxPrelude 2dip 2keep 2bi +- first last part rotd roll
+
+syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
 
 syn match   phxQuote '\'\i\+'
 syn match   phxDefine '\i\+:'
