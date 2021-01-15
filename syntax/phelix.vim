@@ -2,7 +2,7 @@ if exists('b:current_syntax')
   finish
 endif
 
-setlocal isi+=/,',- isk+=/,',-
+setlocal isi+=/,',-,? isk+=/,',-,?
 
 syn match   phxShebang '\%^#!.*$'
 syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
