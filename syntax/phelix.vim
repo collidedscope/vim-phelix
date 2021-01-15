@@ -2,27 +2,27 @@ if exists('b:current_syntax')
   finish
 endif
 
-setlocal isi+=/,',-,? isk+=/,',-,?
+setlocal isi+=/,',+,-,? isk+=/,',+,-,?
 
 syn match   phxShebang '\%^#!.*$'
-syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
-syn match   phxNumber '\.\.'
-syn region  phxString start='"' end='"'
-
 syn match   phxComment '#.*'
 
-syn keyword phxBoolean true false
-syn match phxBoolean '[<>=]'
+syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
+syn match   phxNumber '\.\.'
+
+syn region  phxString start='"' end='"'
+
+syn match   phxBoolean 'true\|false\|[<>=]'
+
 syn keyword phxRepeat while until times each forever
 syn keyword phxConditional if cond
-syn match phxOperator '[-+*/%,.]\|<<\|>>'
+syn match   phxOperator '[-+*/%,.]\|<<\|>>'
 
 syn match   phxBuiltin '\[\]\|{}'
 syn match   phxBuiltin '\\'
-
-syn keyword phxBuiltin dup 2dup over nover pop swap 2swap rot
-syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby juxt
-syn keyword phxBuiltin call juxt
+syn keyword phxBuiltin dup 2dup over nover drop 2drop swap 2swap rot
+syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby
+syn keyword phxBuiltin call
 syn keyword phxBuiltin s/bytes s/split s/join s/slice s/up s/dn
 
 syn keyword phxState f/read f/write sleep gets get put
