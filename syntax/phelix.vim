@@ -11,6 +11,7 @@ syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
 syn match   phxNumber '\.\.'
 
 syn region  phxString start='"' end='"'
+syn keyword phxString s/bytes s/chars s/split s/join s/slice s/up s/dn
 
 syn match   phxBoolean 'true\|false\|[<>=]'
 
@@ -23,7 +24,6 @@ syn match   phxBuiltin '\\'
 syn keyword phxBuiltin dup 2dup over nover drop 2drop swap 2swap rot
 syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby
 syn keyword phxBuiltin call
-syn keyword phxBuiltin s/bytes s/split s/join s/slice s/up s/dn
 
 syn keyword phxState f/read f/write sleep gets get put
 syn match   phxState '<-'
