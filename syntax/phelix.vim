@@ -6,7 +6,7 @@ endif
 syn iskeyword 33,35-39,42-57,60-90,92,94-122,124,126
 
 syn match   phxShebang '\%^#!.*$'
-syn match   phxComment '#.*'
+syn match   phxComment '#.*' contains=phxTodo
 
 syn region  phxString start='"' end='"'
 syn keyword phxString s/bytes s/chars s/split s/join s/slice s/up s/dn
@@ -30,6 +30,8 @@ syn match   phxQuote '\'\k\+'
 syn match   phxDefine '\k\+:'
 syn match   phxDefine ';'
 
+syn keyword phxTodo TODO XXX
+
 hi link phxComment Comment
 hi link phxBoolean Boolean
 hi link phxPrelude Identifier
@@ -42,6 +44,7 @@ hi link phxRepeat Repeat
 hi link phxShebang PreProc
 hi link phxState Type
 hi link phxString String
+hi link phxTodo Todo
 
 function! CribHighlighting(new, group, attrs)
   let l:id = synIDtrans(hlID(a:group))
