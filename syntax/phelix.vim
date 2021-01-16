@@ -12,8 +12,8 @@ syn keyword phxString s/bytes s/chars s/split s/join s/slice s/up s/dn
 
 syn match   phxBoolean 'true\|false\|[<>=]'
 
-syn keyword phxRepeat while until times each each/i forever
-syn keyword phxConditional if cond
+syn keyword phxRepeat while while* until times each each/i forever
+syn keyword phxConditional if unless when when* cond
 syn match   phxOperator '[-+*/%,.]\|<<\|>>\|\.\.'
 
 syn match   phxBuiltin '\[\]\|{}'
