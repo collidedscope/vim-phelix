@@ -2,8 +2,8 @@ if exists('b:current_syntax')
   finish
 endif
 
-" everything but: "():;
-syn iskeyword 33,35-39,42-57,60-126
+" everything but: "():;[]{}
+syn iskeyword 33,35-39,42-57,60-90,92,94-122,124,126
 
 syn match   phxShebang '\%^#!.*$'
 syn match   phxComment '#.*'
@@ -17,8 +17,7 @@ syn keyword phxRepeat while while* until times each each/i forever
 syn keyword phxConditional if unless when when* cond
 syn match   phxOperator '[-+*/%,.]\|<<\|>>\|\.\.'
 
-syn match   phxBuiltin '\<\[]\>' " [] has significance in syn-keyword
-syn keyword phxBuiltin ++ -rot 2dup 2swap \\ argv call clear clone compose curry dip drop dup e eval even? exit in len map maxby nip nth odd? over pick pop puts reject rot select sort source swap swapd tuck uniq v* zip {}
+syn keyword phxBuiltin ++ -rot 2dup 2swap \\ argv call clear clone compose curry dip drop dup e eval even? exit in len map maxby nip nth odd? over pick pop puts reject rot select sort source swap swapd tuck uniq v* zip
 
 syn keyword phxState f/read f/write sleep gets get put invert merge
 syn match   phxState '<-'
