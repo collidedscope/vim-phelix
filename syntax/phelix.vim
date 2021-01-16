@@ -17,17 +17,13 @@ syn keyword phxRepeat while while* until times each each/i forever
 syn keyword phxConditional if unless when when* cond
 syn match   phxOperator '[-+*/%,.]\|<<\|>>\|\.\.'
 
-syn match   phxBuiltin '\[\]\|{}'
-syn match   phxBuiltin '\\'
-syn keyword phxBuiltin dup 2dup over drop swap 2swap rot -rot dip
-syn keyword phxBuiltin p _ len sort map select reject uniq zip max maxby
-syn keyword phxBuiltin call
+syn match   phxBuiltin '\<\[]\>' " [] has significance in syn-keyword
+syn keyword phxBuiltin ++ -rot 2dup 2swap \\ argv call clear clone compose curry dip drop dup e eval even? exit in len map maxby nip nth odd? over pick pop puts reject rot select sort source swap swapd tuck uniq v* zip {}
 
 syn keyword phxState f/read f/write sleep gets get put invert merge
 syn match   phxState '<-'
 
-syn keyword phxPrelude 2drop keep bi tri 2curry with cleave
-syn keyword phxPrelude 2dip 2keep 2bi +- first last part rotd roll
+syn keyword phxPrelude +- 2bi 2bi* 2bi@ 2curry 2dip 2drop 2keep accumulate and bi bi* bi@ cleave eq first keep last not or part prepose produce reduce replicate roll rotd tri with xor
 
 syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
 
