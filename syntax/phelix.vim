@@ -2,7 +2,8 @@ if exists('b:current_syntax')
   finish
 endif
 
-syn iskeyword 48-57,64-90,97-122,+,-,*,/,?,',$,_
+" everything but: "():;
+syn iskeyword 33,35-39,42-57,60-126
 
 syn match   phxShebang '\%^#!.*$'
 syn match   phxComment '#.*'
