@@ -16,12 +16,12 @@ syn match   phxBoolean 'true\|false\|[<>=]'
 syn keyword phxRepeat while while* until times each each/i forever
 syn keyword phxConditional if unless when when* cond
 
-syn keyword phxBuiltin ++ ->map ->vec -rot 2dup 2nip 2swap \\ argv bench call chr clear clone compose curry dip drop dup dupd e eval even? exit fun? getb getc in len map map? maxby nip nth num? odd? over pick pop print puts rand reject rev rot select sort source str? swap swapd tuck uniq v* vec? zip
+syn keyword phxBuiltin ++ ->map ->vec -rot 2dup 2nip 2swap \\ argv bench call chr clear clone compose curry dip drop dup dupd e eval even? exit fun? getb getc in insert len map map? maxby nip nth num->str num? odd? over pick pop print puts rand reject rev rot select sort source str->num str? swap swapd times/i tuck uniq v* vec? zip
 
 syn keyword phxState f/read f/write sleep gets get put invert merge
 syn match   phxState '<-'
 
-syn keyword phxPrelude +- +1 -1 /% 0? 2bi 2bi* 2bi@ 2curry 2dip 2drop 2keep abs accumulate and bi bi* bi@ cart* cleave digits digits/b eq first flat1 keep last max min neg not or part prepose produce put* reduce replicate roll rotd sign tri update with xor zipwith
+syn keyword phxPrelude +- +1 -1 .>. /% 0? 2bi 2bi* 2bi@ 2curry 2dip 2drop 2keep <= >= abs accumulate and bi bi* bi@ cart* cleave digits digits/b eq first flat1 gcd if* intersperse keep last lcm max min neg not or part pop* prepose produce put* reduce replicate roll rotd sign tri update with xor zipwith
 
 syn match   phxNumber '\<-\=\d\+\%(\.\d\+\)\=\>'
 syn match   phxOperator '[-+*/%,.]\|<<\|>>\|\.\.\|<\k\+>'
