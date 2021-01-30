@@ -8,6 +8,7 @@ syn iskeyword 33,35-39,42-57,60-90,92,94-122,124,126
 syn match   phxShebang '\%^#!.*$'
 syn match   phxComment '#.*' contains=phxTodo
 
+syn region  phxShell  start='`' end='`'
 syn region  phxString start='"' end='"'
 syn keyword phxString s/bytes s/chars s/split s/join s/slice s/up s/dn
 
@@ -54,5 +55,6 @@ function! CribHighlighting(new, group, attrs)
 endfunction
 
 call CribHighlighting('phxBuiltin', 'Identifier', 'bold')
+call CribHighlighting('phxShell', 'String', 'bold')
 
 let b:current_syntax = 'phelix'
